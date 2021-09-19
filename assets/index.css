@@ -1,0 +1,159 @@
+html, body {
+  margin: 0 auto;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.no-margin { margin: 0; }
+.yellow { color: #f1c40f; }
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #f1c40f;
+}
+
+.undertitle {
+  font-size: 1rem;
+  font-style: italic;
+  color: #f39c12;
+}
+
+.preview-container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+}
+
+#preview {
+  border: 0;
+}
+
+.editor {
+  position: relative;
+}
+
+.stats {
+  position: absolute;
+  bottom: -1.5em;
+  margin: 0;
+  left: 0;
+  color: #2ecc71;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+textarea {
+  max-width: 800px;
+  min-width: 400px;
+  min-height: 200px;
+}
+
+footer {
+  margin-top: 3em;
+  text-align: center;
+}
+
+/*** DISCORD STYLE ***/
+.messages {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  position: relative;
+}
+
+.messages .message {
+  display: flex;
+  flex-direction: column;
+  margin: 2em 0;
+  border-radius: 1em;
+  padding: 0 4.5em;
+  padding-top: .5em;
+  padding-bottom: 1em;
+  position: relative;
+}
+
+.messages .message .username {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  color: #FF2E30;
+}
+
+.messages .message .avatar {
+  border-radius: 50%;
+  height: 40px;
+  left: 1em;
+  margin-top: 0.3em;
+  position: absolute;
+  width: 40px;
+}
+
+.messages .message .content-container .content {
+  display: flex;
+  flex-direction: column;
+  padding: 2px 0;
+  position: relative;
+  text-decoration: none;
+  text-transform: none;
+  transition: transform 250ms ease-in-out;
+  width: auto;
+  z-index: 9999999999;
+}
+
+.messages .message .content-container .content p {
+  font-size: 16px;
+  margin: 0;
+  text-transform: none;
+  white-space: pre-wrap;
+}
+
+.messages .message .content-container .content .image-container {
+  margin-top: 0.3em;
+  position: relative;
+  width: 100%;
+}
+
+.messages .message .content-container .content .upload {
+  cursor: pointer;
+  display: grid;
+  height: auto;
+  max-height: 250px;
+  max-width: 520px;
+  object-fit: contain;
+  width: auto;
+}
+
+.timestamp {
+  color: #72767d;
+  font-size: 0.8rem;
+  font-weight: normal;
+  margin-left: 0.5rem;
+  vertical-align: baseline;
+}
+
+.tag {
+  background: #7289da;
+  color: #fff;
+  border-radius: 3px;
+  flex-shrink: 0;
+  font-size: .625rem;
+  font-weight: 500;
+  height: 1.28em;
+  line-height: 1.3rem;
+  margin-top: 0.075em;
+  padding: 0.072rem 0.275rem;
+  text-transform: uppercase;
+  vertical-align: text-top;
+}
+
+.botTagVerified {
+  margin-left: -0.25rem;
+  display: inline-block;
+  margin-right: -0.25rem;
+  margin-bottom: -0.27rem;
+}
