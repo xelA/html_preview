@@ -1,0 +1,35 @@
+#toggle-theme {
+  cursor: pointer;
+  position: absolute;
+  right: .5em;
+  top: .5em;
+  z-index: 99999999999;
+}
+
+#toggle-theme .theme-icon {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 36px;
+  transition: all 500ms ease-in-out;
+  width: 36px;
+}
+
+.dark-theme .theme-icon { background-image: url("moon-light.png"); }
+.light-theme .theme-icon { background-image: url("sun-dark.png"); }
+
+.messages .message {
+  transition: box-shadow 500ms ease-in-out,
+              background-color 500ms ease-in-out,
+              color 500ms ease-in-out;
+}
+
+.light-theme.messages p, .light-theme.messages .content { color: #000; }
+.dark-theme .message {
+  background-color: #36393f;
+  box-shadow: 0 0 25px #36393f;
+}
+
+.light-theme .message {
+  background-color: #fff;
+  box-shadow: 0 0 25px #d9d9d9;
+}

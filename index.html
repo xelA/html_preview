@@ -12,13 +12,10 @@
 
     <!-- CSS/JS -->
     <link href="./assets/index.css" type="text/css" rel="stylesheet"/>
-    <link href="./assets/themes.css" type="text/css" rel="stylesheet"/>
+    <link href="./assets/discord-theme.css" type="text/css" rel="stylesheet"/>
     <script src="./assets/main.js" type="text/javascript" charset="utf-8"></script>
   </head>
-  <body class="dark-theme">
-    <section id="toggle-theme">
-      <div class="theme-icon"></div>
-    </section>
+  <body>
     <section class="container">
       <h1 class="title no-margin">xelA HTML Preview</h1>
       <div class="preview-container">
@@ -26,8 +23,9 @@
           Everything you write in the <b>&lt;textbox&gt;</b> will be shown in the <b>&lt;iframe&gt;</b>
         </p>
 
-        <div class="messages">
+        <div class="messages dark-theme" id="discord">
           <div class="message">
+            <div id="toggle-theme"><div class="theme-icon"></div></div>
             <img class="avatar" src="./assets/avatar.png" draggable="false">
             <h2 class="username">
               xelA
@@ -39,7 +37,7 @@
             </h2>
             <div class="content-container">
               <span class="content">
-                <p>Rendered by <b>AlexFlipnote#0001</b></p>
+                <p>Rendered by <b>xelA#0336</b></p>
                 <div class="image-container">
                   <iframe id="preview" style="width: 350px;"></iframe>
                 </div>

@@ -32,13 +32,13 @@ window.addEventListener('load', () => {
   })
 
   theme.addEventListener("click", (e) => {
-    const body_classes = document.body.classList
-    if (body_classes[0] == "dark-theme") {
-      body_classes.add("light-theme")
-      body_classes.remove("dark-theme")
+    const discord_container = document.getElementById("discord").classList
+    if (discord_container[1] == "dark-theme") {
+      discord_container.add("light-theme")
+      discord_container.remove("dark-theme")
     } else {
-      body_classes.remove("light-theme")
-      body_classes.add("dark-theme")
+      discord_container.remove("light-theme")
+      discord_container.add("dark-theme")
     }
   })
 })
