@@ -8,7 +8,7 @@ const DEFAULT_HTML_XELA = `
     </div>
     <style>
       html, body { width: 1500px; height: 1500px; background: #fff; margin: auto 0; overflow: hidden; }
-      #capture { display: inline-block; height: auto; width: auto; overflow: hidden; }
+      #capture { display: inline-block; height: auto; width: auto; overflow: hidden; position: relative; }
     </style>
   </body>
 </html>
