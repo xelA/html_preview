@@ -19,6 +19,10 @@ window.addEventListener('load', () => {
   const editor = document.getElementById("editor")
   const theme = document.getElementById("toggle-theme")
   const chars = document.getElementById("chars")
+  const importBtn = document.getElementById("import")
+  const downloadBtn = document.getElementById("download")
+  const downloadAnchor = document.getElementById("downloadanchor")
+  const fileInput = document.getElementById("fileinput")
 
   iframe.contentWindow.document.write(DEFAULT_HTML_XELA)
   const d = iframe.contentWindow.document
@@ -29,6 +33,7 @@ window.addEventListener('load', () => {
     chars.innerText = editor.value.length.toLocaleString()
     iframe.style.width = `${capture.clientWidth}px`
     iframe.style.height = `${capture.clientHeight}px`
+    downloadBtn.disabled = !editor.value
   })
 
   theme.addEventListener("click", (e) => {
@@ -40,5 +45,31 @@ window.addEventListener('load', () => {
       discord_container.remove("light-theme")
       discord_container.add("dark-theme")
     }
+  })
+
+  downloadBtn.addEventListener("click", (e) => {
+    if (!editor.value) return
+    const blob = new Blob([editor.value], { type: "text/html" })
+    const url = URL.createObjectURL(blob)
+    downloadAnchor.href = url
+    setTimeout(() => downloadAnchor.click(), 0)
+    setTimeout(() => URL.revokeObjectURL(url), 60)
+  })
+
+  importBtn.addEventListener("click", () => fileInput.click())
+
+  fileInput.addEventListener("change", (e) => {
+    const file = fileInput.files[0]
+    if (!file) return
+
+    const reader = new FileReader()
+    reader.addEventListener('load', (event) => {
+      editor.value = event.target.result
+      editor.dispatchEvent(new Event('input'))
+      importBtn.disabled = false
+    });
+    importBtn.disabled = true
+    reader.readAsText(file)
+    fileInput.value = ''
   })
 })
